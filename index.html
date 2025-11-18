@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desk Flow Mobility | Pain Relief & <strong>Focus</strong> for Desk Workers</title>
+    <meta name="description" content="5-minute desk exercises to relieve neck & shoulder pain, loosen hips & lower back, reduce stress with deep breathing, and boost mood & focus with gratitude practices.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2563eb;     /* blue */
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;   /* emerald */
+            --gray-100: #f3f4f6;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: #fff;
+        }
+        a { text-decoration: none; color: var(--primary); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .logo span { color: var(--secondary); }
+        .nav-links a {
+            margin-left: 2rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            margin-bottom: 4rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+        }
+        .hero h1 span { color: var(--primary); }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--gray-800);
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); }
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Features */
+        .features {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--gray-900);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        .card {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); }
+        .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        /* How it works */
+        .how-it-works {
+            padding: 5rem 2rem;
+            background: var(--gray-100);
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            counter-reset: step;
+        }
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--secondary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        .testimonial {
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            color: var(--gray-800);
+        }
+        .testimonial-author {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* CTA */
+        .cta {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), #3b82f6);
+            color: white;
+        }
+        .cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: #fff;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        .footer-links a {
+            color: #9ca3af;
+            margin: 0 1rem;
+        }
+        .footer-links a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .nav-links { display: none; } /* simple version – add hamburger later if needed */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Desk<span>Flow</span>Mobility</div>
+            <div class="nav-links">
+                <a href="#features">Benefits</a>
+                <a href="#how">How It Works</a>
+                <!-- <a href="#testimonials">Testimonials</a> -->
+                <a href="#cta">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Move Better.<br><span>Feel Better.</span><br>Work Better.</h1>
+            <p>5-minute guided movements & breathing exercises designed specifically for people who sit at desks all day. Relieve neck & shoulder pain, loosen tight hips, reduce stress, and <strong>boost productivity</strong> & mood — from their desk.</p>
+            <div>
+                <a href="https://calendly.com/danieldsmit/mobility-gratitude-meeting" class="btn btn-primary">Book a free group session</a>
+                <a href="https://www.loom.com/share/15cac19d82c54d63a658470e46acfce7" class="btn btn-outline">Watch How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">One Program, Four Powerful Results</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🩻</div>
+                    <h3>Neck & Shoulder Relief</h3>
+                    <p>Targeted stretches and mobility drills that melt away tension in minutes.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🦵</div>
+                    <h3>Loose Hips & Lower Back</h3>
+                    <p>Undo the damage of sitting with simple flows you can do right at your chair.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🫁</div>
+                    <h3>Deep Breathing & Calm</h3>
+                    <p>Science-backed breathing techniques to instantly lower stress and increase <strong>productivity and focus</strong>.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌟</div>
+                    <h3>Gratitude & Mood Boost</h3>
+                    <p>Short guided gratitude exercises proven to improve mood and work quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Get Your Daily Flow</h3>
+                    <p>Receive a new 5-8 minute guided video (or audio) straight to your inbox.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Do It At Your Desk</h3>
+                    <p>No equipment. No changing clothes. Just follow along seated or standing beside your chair.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Feel the Difference</h3>
+                    <p>Less pain, better posture, calmer mind, and noticeably better mood & productivity within 4 weeks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial section to come -->
+    <!-- <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Desk Workers Are Saying</h2>
+            <div class="testimonial">
+                <p>“I used to finish my day with a stiff neck and aching shoulders. After two weeks of Desk Flow Mobility I feel loose, energized, and actually enjoy the gratitude part at the end.”</p>
+                <div class="testimonial-author">— Sarah K., Software Engineer</div>
+            </div>
+            <div class="testimonial">
+                <p>“The breathing + gratitude combo is magic. My stress levels dropped and my team noticed I’m more positive in meetings.”</p>
+                <div class="testimonial-author">— Michael T., Project Manager</div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="cta" id="cta">
+        <div class="container">
+            <h2>Start Feeling Better Tomorrow Morning</h2>
+            <p style="font-size:1.3rem; margin-bottom: 2rem;">Join thousands of desk workers who move, breathe, and feel better every single day.</p>
+            <a href="https://calendly.com/danieldsmit/mobility-gratitude-meeting" class="btn btn-primary" style="font-size:1.3rem; padding:1rem 3rem;">Book your group session now →</a>
+            <p style="margin-top: 2rem; opacity:0.9;">No credit card required • Cancel anytime</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="color:white; margin-bottom:1rem;">Desk<span style="color:var(--secondary);">Flow</span>Mobility</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p style="margin-top:2rem; color:#9ca3af;">© 2025 Desk Flow Mobility. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
